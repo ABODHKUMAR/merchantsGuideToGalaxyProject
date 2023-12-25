@@ -56,7 +56,43 @@ In the above example, 1,000 = M, 900 = CM, and
 Solution:
 ![Alt Text](solutionmerchantsGuideToGalaxyProblem.jpg)
 
+IN the Entire Problem the main Logic Is:
 
 
+ public int romanToInt(String s) {
+         int ans = 0, num = 0;
+        for (int i = s.length()-1; i >= 0; i--) {
+            switch(s.charAt(i)) {
+                case 'I': num = 1; break;
+                case 'V': num = 5; break;
+                case 'X': num = 10; break;
+                case 'L': num = 50; break;
+                case 'C': num = 100; break;
+                case 'D': num = 500; break;
+                case 'M': num = 1000; break;
+            }
+            if (4 * num < ans) ans -= num;
+            else ans += num;
+        }
+        return ans;
+    }
+
+and as Well as
+
+bool ValidationOfRomanNumerals(string str)
+{
+
+    const regex pattern("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
+
+    if (str.empty()) {
+        return false;
+    }
+    if (regex_match(str, pattern)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
 
