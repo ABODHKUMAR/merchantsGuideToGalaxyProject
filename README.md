@@ -57,9 +57,8 @@ Solution:
 ![Alt Text](solutionmerchantsGuideToGalaxyProblem.jpg)
 
 IN the Entire Problem the main Logic Is:
-
-
- public int romanToInt(String s) {
+```
+public int romanToInt(String s) {
          int ans = 0, num = 0;
         for (int i = s.length()-1; i >= 0; i--) {
             switch(s.charAt(i)) {
@@ -81,8 +80,7 @@ and as Well as
 
 bool ValidationOfRomanNumerals(string str)
 {
-
-    const regex pattern("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
+ const regex pattern("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
 
     if (str.empty()) {
         return false;
@@ -94,5 +92,5 @@ bool ValidationOfRomanNumerals(string str)
         return false;
     }
 }
-
+```
 
